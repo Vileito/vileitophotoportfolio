@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melns fons un balts h1 teksts</title>
+    <style>
+        body {
+            background-color: black; /* Fona krāsa visai lapai */
+            color: white; /* Noklusējuma teksta krāsa visiem teksta elementiem */
+        }
+
+        h1 {
+            color: white; /* Teksta krāsa visiem h1 elementiem */
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image {
+            max-width: 100%;
+            transition: transform 0.2s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Šis ir virsraksts</h1>
+    <div class="image-container">
+        <img class="image" src="example.jpg" alt="Attēls">
+    </div>
+
+    <script>
+        const image = document.querySelector('image');
+        image.addEventListener('click', function() {
+            this.style.width = '400px';
+            this.style.height = 'auto';
+            this.style.cursor = 'zoom-out';
+        });
+    </script>
+</body>
+</html>
